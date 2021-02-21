@@ -1,0 +1,65 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.BUILD-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '10'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+
+
+	// https://mvnrepository.com/artifact/org.springframework/spring-aspects
+compile group: 'org.springframework', name: 'spring-aspects', version: '3.2.4.RELEASE'
+compile('org.apache.commons:commons-lang3:3.9')
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+
+	compileOnly 'org.projectlombok:lombok:1.18.10'
+	annotationProcessor 'org.projectlombok:lombok:1.18.10'
+
+	// https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
+	implementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2.4'
+	// https://mvnrepository.com/artifact/javax.activation/javax.activation-api
+	implementation group: 'javax.activation', name: 'javax.activation-api', version: '1.2.0'
+	// https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-core
+	implementation group: 'com.sun.xml.bind', name: 'jaxb-core', version: '2.3.0.1'
+	// https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl
+	implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.4.0-b180830.0438'
+
+
+
+
+
+	// https://mvnrepository.com/artifact/org.springframework.retry/spring-retry
+	implementation group: 'org.springframework.retry', name: 'spring-retry', version: '1.0.3.RELEASE'
+
+	// https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils
+	implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.3'
+	// https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '2.3.0'
+
+	// https://mvnrepository.com/artifact/org.json/json
+	compile group: 'org.json', name: 'json', version: '20200518'
+
+
+
+
+
+
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,4 @@
+spring:
+  jackson:
+    default-property-inclusion: NON_NULL
+    property-naming-strategy: SNAKE_CASE

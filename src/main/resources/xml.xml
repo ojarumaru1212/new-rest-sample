@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<obj>
+	<User>
+		<name>fname</name>
+		<id>001</id>
+		<array>
+			<a_name>aaaaaa</a_name>
+			<a_name>bbbbb</a_name>
+		</array>
+	</User>
+</obj>

@@ -1,0 +1,55 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "b5a65b9e-eec4-4d1e-ae4a-edbcc58e415b",
+        "name": "AOP"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"id\":\"123\",\n  \"name\":\"nag\",\n  \"t_flg\":\"false\",\n  \"fuga\":{\n    \"id\":\"ds\",\n    \"str_fuga\":[\n      \"afa\"]\n  }\n}"
+            },
+            "uri": {
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:8080",
+              "path": "/hoge"
+            },
+            "id": "b0abe941-e1c9-42c0-b282-3b98f958e88a",
+            "name": "postHogeのコピー",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "X-id",
+                "value": "adff"
+              },
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
